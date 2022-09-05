@@ -1,17 +1,17 @@
 package rpp2021.model;
 
-import java.sql.Date;
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,23 +23,20 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Tim {
+public class Nacionalnost implements Serializable {
+	private static final long serialVersionUID = 1L;
 
 	 @Id
-	 @SequenceGenerator(name="TIM_ID_GENERATOR", sequenceName="TIM_SEQ", allocationSize=1)
-	 @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="TIM_ID_GENERATOR")
+	 @SequenceGenerator(name="NACIONALNOST_ID_GENERATOR", sequenceName="NACIONALNOST_SEQ", allocationSize=1)
+	 @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="NACIONALNOST_ID_GENERATOR")
 	 private Integer id;
-	
-	 private String naziv;
-
-	 private Date osnovan;
-	
-	 private String sediste;
-	
-	 @ManyToOne
-	 private Liga liga;
 	 
+	 private String naziv;
+	 
+	 private String skracenica;
+
 	 @OneToMany(cascade = CascadeType.ALL)
+	 @JsonIgnore
 	 private List<Igrac> igraci;
-	
+	 
 }
