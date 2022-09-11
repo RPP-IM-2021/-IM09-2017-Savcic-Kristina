@@ -1,4 +1,4 @@
-package rpp2021.swagger;
+package rpp2021;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,8 +10,9 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableSwagger2
+@Configuration
 public class Swagger {
-
+	
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2)
@@ -20,5 +21,6 @@ public class Swagger {
 				.paths(PathSelectors.any())
 				.build();
 	}
+
 
 }
