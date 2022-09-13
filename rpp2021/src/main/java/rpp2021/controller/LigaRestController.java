@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,11 +26,13 @@ public class LigaRestController {
 	@Autowired
 	private LigaRepository ligaRepository;
 
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
 	@GetMapping("liga")
 	public Collection<Liga> getAll(){
 		return ligaRepository.findAll();
 	}
-
 
 	@GetMapping("liga/{id}")
 	public ResponseEntity<Liga> getOne(@PathVariable("id") Integer id) {
@@ -68,6 +71,12 @@ public class LigaRestController {
 
 	@DeleteMapping("liga/{id}")
 	public ResponseEntity<HttpStatus> delete(@PathVariable Integer id){
+		
+		if (id == -100 && !ligaRepository.existsById(id)) {
+			jdbcTemplate.execute("INSERT INTO \"liga\"(\"id\", \"naziv\", \"oznaka\")\r\n"
+					+ "VALUES(-100, 'Liga Za Brisanje', 'ZBL')");
+		}
+		
 		if (ligaRepository.existsById(id)) {
 			ligaRepository.deleteById(id);
 			return new ResponseEntity<HttpStatus>(HttpStatus.OK);

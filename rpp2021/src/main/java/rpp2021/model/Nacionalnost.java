@@ -26,8 +26,8 @@ public class Nacionalnost implements Serializable {
 	private static final long serialVersionUID = 1L;
 	 
 	@Id
-	@SequenceGenerator(name="NACIONALNOST_ID_GENERATOR", sequenceName="ARTIKL_SEQ", allocationSize=1)
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ARTIKL_ID_GENERATOR")
+	@SequenceGenerator(name="NACIONALNOST_ID_GENERATOR", sequenceName="NACIONALNOST_SEQ", allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="NACIONALNOST_ID_GENERATOR")
 	private Integer id;
 
 	private String naziv;
@@ -37,9 +37,7 @@ public class Nacionalnost implements Serializable {
 	//bi-directional many-to-one association to Igrac
 	@OneToMany(mappedBy="nacionalnost")
 	@JsonIgnore
-	private List<Igrac> igracs;
-
-
+	private List<Igrac> igraci;
 
 	public Integer getId() {
 		return this.id;
@@ -65,23 +63,23 @@ public class Nacionalnost implements Serializable {
 		this.skracenica = skracenica;
 	}
 
-	public List<Igrac> getIgracs() {
-		return this.igracs;
+	public List<Igrac> getIgraci() {
+		return this.igraci;
 	}
 
-	public void setIgracs(List<Igrac> igracs) {
-		this.igracs = igracs;
+	public void setIgraci(List<Igrac> igraci) {
+		this.igraci = igraci;
 	}
 
 	public Igrac addIgrac(Igrac igrac) {
-		getIgracs().add(igrac);
+		getIgraci().add(igrac);
 		igrac.setNacionalnost(this);
 
 		return igrac;
 	}
 
 	public Igrac removeIgrac(Igrac igrac) {
-		getIgracs().remove(igrac);
+		getIgraci().remove(igrac);
 		igrac.setNacionalnost(null);
 
 		return igrac;

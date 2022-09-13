@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,9 @@ public class TimRestController {
 	@Autowired
 	private TimRepository timRepository;
 
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
 	@ApiOperation(value = "Returns collection of all Tim from database")
 	@GetMapping("tim")
 	public Collection<Tim> getAllTim(){
@@ -63,6 +67,12 @@ public class TimRestController {
 
 	@DeleteMapping("tim/{id}")
 	public ResponseEntity<HttpStatus> delete(@PathVariable Integer id){
+		
+		if (id == -100 && !timRepository.existsById(id)) {
+			jdbcTemplate.execute("INSERT INTO \"tim\"(\"id\", \"naziv\", \"liga\", \"osnovan\", \"sediste\")\r\n" 
+					+ "VALUES (-100, 'Neznani Tim', 3, to_date('01.03.1995.','dd.mm.yyyy.'), 'Babusnice')");
+		}
+		
 		if (timRepository.existsById(id)) {
 			timRepository.deleteById(id);
 			return new ResponseEntity<HttpStatus>(HttpStatus.OK);

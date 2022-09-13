@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="52333300-feed-4c60-bca6-e59cb12ef9db" activeEnvironment="Default" name="rpp-kristina-savcic" resourceRoot="${projectDir}" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+	<con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="true"/>
+</xml-fragment>]]></con:setting></con:settings>
+	<con:interface xsi:type="con:RestService" id="2c48fcce-2591-4363-b005-f3877bdb02dc" wadlVersion="http://wadl.dev.java.net/2009/02" name="Nacionalnost endpoints" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		
+		<con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+			<con:endpoint>http://localhost:8080</con:endpoint>
+		</con:endpoints>
+		<con:resource name="nacionalnost getAll" path="/nacionalnost" id="f6382792-8f6a-4abb-ad5d-f61588a99a8d">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="nacionalnost getAll" id="a92d931f-6c64-4505-88fe-f7dc812f8c43" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getAll" id="e1327f04-5d3f-4106-a21a-8f98ed9648dc" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/nacionalnost</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="nacionalnost getOne" path="/nacionalnost/{id}" id="4a4afab3-378e-42de-b92b-1baf8ed082ba">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>id</con:name>
+					<con:value/>
+					<con:style>TEMPLATE</con:style>
+					<con:default/>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="Nacionalnost getOne" id="43af1a7c-c488-4334-9c98-81d8b4891c61" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:ns="http://localhost/nacionalnost/1">ns:Response</con:element>
+				</con:representation>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>405</con:status>
+					<con:params/>
+					<con:element xmlns:ns="http://localhost/nacionalnost/1">ns:Fault</con:element>
+				</con:representation>
+				<con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="getOne" id="cef953bc-a62e-4557-b2cf-76636587f2a3" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/nacionalnost/1</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>id</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="nacionalnost getByNaziv" path="/nacionalnost/naziv/{naziv}" id="be80d927-84b5-44d2-bde6-d9bb243cfd2f">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>naziv</con:name>
+					<con:value/>
+					<con:style>TEMPLATE</con:style>
+					<con:default/>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="nacionalnost getByNaziv" id="75eca4e9-2847-4a87-8d70-92f6bd031e45" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getByNaziv" id="29136c06-93ea-4766-8a80-6f20107da1c6" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/nacionalnost/naziv/mleko
+					</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="naziv" value="mleko" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>naziv</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="nacionalnost add" path="/nacionalnost/" id="4e7e3eb1-91c8-4091-b1cb-8fd79d731654">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="nacionalnost add" id="f6a0310e-2694-4e82-a569-e9472c6f5117" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>201</con:status>
+					<con:params/>
+					<con:element xmlns:art="http://localhost/nacionalnost/">art:Response</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:request name="add" id="6dbeea55-174f-46a4-b94c-081226bc0840" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+						"naziv": "Srbija",
+						"skracenica": "SRB"
+						}
+					</con:request>
+					<con:originalUri>http://localhost/nacionalnost/</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="nacionalnost update" path="/nacionalnost/{id}" id="2e59cd8a-a7c6-4b9c-95f3-326ed1795838">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>id</con:name>
+					<con:value/>
+					<con:style>TEMPLATE</con:style>
+					<con:default/>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="nacionalnost update" id="4977fd08-ebcf-4b42-8ccf-3df443bf84ab" method="PUT">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:ns="http://localhost/nacionalnost/1">ns:Response</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:ns="http://localhost/nacionalnost/1">ns:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="update" id="b1fe230b-002a-4fbd-90f0-0227b9887760" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+						"naziv": "Hrvatska",
+						"skracenica": "HRT"
+						}
+					</con:request>
+					<con:originalUri>http://localhost/nacionalnost/1</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>id</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="nacionalnost delete" path="/nacionalnost/{id}" id="1bf5b34a-3a7f-4b17-9356-917ec323e4ae">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>id</con:name>
+					<con:value>-100</con:value>
+					<con:style>TEMPLATE</con:style>
+					<con:default>-100</con:default>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="nacionalnost delete" id="91d905d3-2e06-4574-b373-2527f105bdb9" method="DELETE">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="delete" id="fcbaced3-b231-4cff-aa09-ced99ad4dcd1" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/nacionalnost/-100
+					</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>id</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+	</con:interface>
+	<con:interface xsi:type="con:RestService" id="45a1f4d4-7720-452a-908c-cd40dee7f3b6" wadlVersion="http://wadl.dev.java.net/2009/02" name="Liga endpoints" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		
+		<con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+			<con:endpoint>http://localhost:8080</con:endpoint>
+		</con:endpoints>
+		<con:resource name="liga getAll" path="/liga" id="f045dafd-2094-4bde-a286-10ac059898fe">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="liga getAll" id="d335a52b-a58b-4bb3-a89f-1af9500bd26f" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getAll" id="c031460f-e6bd-4fdc-bb90-d183668eb1f0" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/liga</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="liga getOne" path="/liga/{id}" id="1f77d1a4-a183-426b-a7ce-00b234610ff4">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>id</con:name>
+					<con:value/>
+					<con:style>TEMPLATE</con:style>
+					<con:default/>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="liga getOne" id="44541055-23f9-46da-9d28-aa66767684d2" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:ns="http://localhost/liga/1">ns:Response</con:element>
+				</con:representation>
+				<con:request name="getOne" id="9557c4dd-43e1-49d1-bfd6-4a91d12fccde" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/liga/1</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>id</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="liga getByNaziv" path="/liga/naziv/{naziv}" id="5a520287-0ee7-478f-9d52-5efa3c6c3abe">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>naziv</con:name>
+					<con:value/>
+					<con:style>TEMPLATE</con:style>
+					<con:default/>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="liga getByNaziv" id="0129429a-4f56-43a6-b98c-fb3ea2c7776d" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getByNaziv" id="795d4347-1650-4d78-bd4e-5c66db3dd3c6" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/liga/naziv/imlek
+					</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="naziv" value="imlek" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>naziv</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="liga add" path="/liga/" id="ad2d8ccf-0fac-4cee-9001-4dc0b7609eb4">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="liga add" id="d86827bf-15ad-454f-b02c-fc67cd787e23" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>201</con:status>
+					<con:params/>
+					<con:element xmlns:dob="http://localhost/liga/">dob:Response</con:element>
+				</con:representation>
+				<con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400 415</con:status><con:params/><con:element xmlns:liga="http://localhost/liga/">liga:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:request name="add" id="81344677-9c11-4aa0-aabf-93e43c92da02" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+						"naziv": "Mala",
+						"oznaka": "MA",
+						}
+					</con:request>
+					<con:originalUri>http://localhost/liga/</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="liga update" path="/liga/{id}" id="f74f417a-54f4-495c-80da-f49be39c2017">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>id</con:name>
+					<con:value/>
+					<con:style>TEMPLATE</con:style>
+					<con:default/>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="liga update" id="8ec4e9bf-7c85-42e2-bf15-7d93b12a653a" method="PUT">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:ns="http://localhost/liga/1">ns:Response</con:element>
+				</con:representation>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>400</con:status>
+					<con:params/>
+					<con:element xmlns:ns="http://localhost/liga/-100">ns:Fault</con:element>
+				</con:representation>
+				<con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="update" id="4a7ddbe0-96be-47df-b7ac-f9faa9b11877" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+						"naziv": "Junior",
+						"oznaka": "JU",
+						}
+					</con:request>
+					<con:originalUri>http://localhost/liga/1</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>id</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="liga delete" path="/liga/{id}" id="0eaf21c8-d60c-49c4-8647-f73310f14b3e">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>id</con:name>
+					<con:value/>
+					<con:style>TEMPLATE</con:style>
+					<con:default/>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="liga delete" id="deffe392-3b14-4b0c-80e0-01e9a7c27e2b" method="DELETE">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="delete" id="c9e5727a-bcfe-404c-9b83-11ad7d8187ef" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/liga/-100</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>id</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+	</con:interface>
+	<con:interface xsi:type="con:RestService" id="94b7dab3-8a5f-46b8-9f54-c0655e76c29f" wadlVersion="http://wadl.dev.java.net/2009/02" name="Tim endpoints" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		<con:definitionCache type="TEXT" rootPart=""/>
+		<con:endpoints>
+			<con:endpoint>http://localhost:8080</con:endpoint>
+		</con:endpoints>
+		<con:resource name="tim getAll" path="/tim/" id="2f3f7bfe-2f0b-4dd5-b964-8950613cbb1a">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Tim getAll" id="f22c2ea3-9c92-424b-b289-727ac95254fa" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>500</con:status>
+					<con:params/>
+					<con:element xmlns:por="http://localhost/tim/">por:Fault</con:element>
+				</con:representation>
+				<con:request name="getAll" id="f34137a9-f6ae-48f4-9e6b-ee23db24b336" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/tim/</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="tim getOne" path="/tim/{id}" id="b4e2f93c-9f4c-4ffc-8032-2b072f70ebd9">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>id</con:name>
+					<con:value>1</con:value>
+					<con:style>TEMPLATE</con:style>
+					<con:default>1</con:default>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="tim getOne" id="8dd56276-f363-446d-a67a-684bae267225" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getOne" id="26c06e0c-0e1d-45dc-b75b-17629328d014" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/tim/</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>id</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="tim add" path="/tim/" id="834317cf-2294-446f-a839-78961504882c">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="tim add" id="d5b98dcf-781e-41c1-87f0-13892e9fc8d5" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>201</con:status>
+					<con:params/>
+					<con:element xmlns:por="http://localhost/tim/">por:Response</con:element>
+				</con:representation>
+				<con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:tim="http://localhost/tim/">tim:Fault</con:element></con:representation><con:request name="add" id="2d5cae59-7e23-49c2-8186-cce78dd760d3" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+						"naziv": "Srem",
+						"osnovan": "2011-08-03T23:00:00.000+00:00",
+						"sediste": "Sremska Mitrovica",
+						"liga": {
+						"id": 1
+						}
+						}
+					</con:request>
+					<con:originalUri>http://localhost/tim/</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="tim update" path="/tim/{id}" id="ceebe1df-7e04-4fcb-88a7-53511c5be037">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>id</con:name>
+					<con:value/>
+					<con:style>TEMPLATE</con:style>
+					<con:default/>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="tim update" id="e712896e-1252-4d70-83a9-7079ec23d76d" method="PUT">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:ns="http://localhost/tim/1">ns:Response</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:ns="http://localhost/tim/1">ns:Fault</con:element></con:representation><con:request name="update" id="7177eed2-0b0d-45bb-8ec0-e9d859165f13" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+						"naziv": "Crvena Zvezda",
+						"osnovan": "2017-02-28T23:00:00.000+00:00",
+						"sediste": "Beograd",
+						"liga": {
+						"id": 3
+						}
+						}
+					</con:request>
+					<con:originalUri>http://localhost/tim/1</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>id</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="tim delete" path="/tim/{id}" id="cf4cdf05-7f98-46f5-a2a1-b64f2c6f42d2">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>id</con:name>
+					<con:value/>
+					<con:style>TEMPLATE</con:style>
+					<con:default/>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="tim delete" id="ed903b64-912e-425f-9729-20db375ec1ef" method="DELETE">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="delete" id="1336c03a-a612-435c-9dd3-2524d94d16f4" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/tim/-100</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>id</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+	</con:interface>
+	<con:interface xsi:type="con:RestService" id="6539ec29-94c9-4524-97b6-0963f7ef1421" wadlVersion="http://wadl.dev.java.net/2009/02" name="Igrac endpoints" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		
+		<con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+			<con:endpoint>http://localhost:8080</con:endpoint>
+		</con:endpoints>
+		<con:resource name="igrac getAll" path="/igrac/" id="053b76b1-d3b1-4c45-bab1-6b4f30c00c22">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="igrac getAll" id="4f4ff54c-6352-436a-bbf4-56ada5036c60" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getAll" id="1e1f9011-1c88-4a77-8c86-1ae34f2ff1b9" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/igrac/</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="igrac getOne" path="/igrac/{id}" id="97359948-fdb3-4b15-8911-8bbb2eedaafa">
+			<con:settings/>
+			<con:parameters>
+				
+			<con:parameter><con:name>id</con:name><con:value>1</con:value><con:style>TEMPLATE</con:style><con:default>1</con:default></con:parameter></con:parameters>
+			<con:method name="igrac getOne" id="0ca8b158-72a1-4a1f-bc12-2f6aa30439f0" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:ns="http://localhost/igrac/1">ns:Response</con:element>
+				</con:representation>
+				<con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:ns="http://localhost/igrac/1">ns:Fault</con:element></con:representation><con:request name="getOne" id="142ff65d-3545-4fb3-b45c-afd90ac8920e" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/igrac/1</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters><entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+					<con:parameterOrder><con:entry>id</con:entry></con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+		
+		<con:resource name="igrac add" path="/igrac/" id="6aeae0ef-a70d-491b-bce6-75b555188700">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="igrac add" id="069b99e5-2955-4020-8649-51d39f21da81" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>201 200</con:status>
+					<con:params/>
+					<con:element xmlns:stav="http://localhost/igrac/">stav:Response</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400 500</con:status><con:params/><con:element xmlns:igr="http://localhost/igrac/">igr:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="add" id="b1a27380-2927-4986-a54b-0bced853bdb5" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>  {
+    "ime": "Nikola",
+    "prezime": "Nikolic",
+    "brojReg": 3332111,
+    "datumRodjenja": "2022-09-11T22:00:00.000+00:00",
+    "tim": {
+      "id": 21,
+      "naziv": "Buducnost",
+      "osnovan": "1970-10-09T23:00:00.000+00:00",
+      "sediste": "Podgorica",
+      "liga": {
+        "id": 65,
+        "naziv": "Superliga Srbije",
+        "oznaka": "SLS"
+      }
+    },
+    "nacionalnost": {
+      "id": 10,
+      "naziv": "Severna Makedonija",
+      "skracenica": "NMK"
+    }
+  },
+					</con:request>
+					<con:originalUri>http://localhost/igrac/</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+					<con:parameterOrder/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="igrac update" path="/igrac/{id}" id="f2110e13-c033-42b2-b909-77ba9fe76112">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>id</con:name>
+					<con:value/>
+					<con:style>TEMPLATE</con:style>
+					<con:default/>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="igrac update" id="9b7a5ee1-e317-498d-9ae1-506dd36fc72d" method="PUT">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:ns="http://localhost/igrac/1">ns:Response</con:element>
+				</con:representation>
+				<con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:ns="http://localhost/igrac/1">ns:Fault</con:element></con:representation><con:request name="update" id="7442ca29-e7ba-4788-bdd4-bfc3f2c73463" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+						"ime": "Stepan",
+						"prezime": "Stepic",
+						"brojReg": 11332,
+						"datum_rodj": "1998-09-19T23:00:00.000+00:00",
+						"nacionalnost": {
+						"id": 2
+						},
+						"tim": {
+						"id": 2
+						}
+						}
+					</con:request>
+					<con:originalUri>http://localhost/igrac/1</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>id</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="igrac delete" path="/igrac/{id}" id="edb3a7bc-effa-4cf9-a2c4-1d5be3a7c270">
+			<con:settings/>
+			<con:parameters>
+				<con:parameter>
+					<con:name>id</con:name>
+					<con:value/>
+					<con:style>TEMPLATE</con:style>
+					<con:default/>
+					<con:description xsi:nil="true"/>
+				</con:parameter>
+			</con:parameters>
+			<con:method name="igrac delete" id="e56cf254-b104-47dc-bb91-3b1c8f2cbd48" method="DELETE">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>500</con:status>
+					<con:params/>
+					<con:element xmlns:ns="http://localhost/igrac/-100">ns:Fault</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="delete" id="31959d42-3a8d-4edf-9257-e506f3edd0f7" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/igrac/-100</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters>
+						<entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/>
+					</con:parameters>
+					<con:parameterOrder>
+						<con:entry>id</con:entry>
+					</con:parameterOrder>
+				</con:request>
+			</con:method>
+		</con:resource>
+	</con:interface>
+	<con:testSuite id="4d24b8c5-ba02-41f4-ae0a-ec64fe38119e" name="TestSuite - Nacionalnost">
+		<con:description>TestSuite generated for REST Service
+			[http://localhost:8080]</con:description>
+		<con:settings/>
+		<con:runType>SEQUENTIAL</con:runType>
+		<con:testCase id="c8ef76d0-156a-41ad-93c7-66be7f6504b4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="http://localhost:8080 TestSuite" searchProperties="true">
+			<con:settings/>
+			<con:testStep type="restrequest" name="nacionalnost getAll" id="bf4976a8-520f-4573-a276-cdbc72559dc4">
+				<con:settings/>
+				<con:config service="Nacionalnost endpoints" resourcePath="/nacionalnost" methodName="nacionalnost getAll" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="nacionalnost getAll" id="e1327f04-5d3f-4106-a21a-8f98ed9648dc" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/nacionalnost</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="d437a2a9-1ad9-43e8-8d5a-0edba768bd99" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="nacionalnost getOne" id="307e2d63-cf47-43aa-bfcc-6ee31cd6c1b3">
+				<con:settings/>
+				<con:config service="Nacionalnost endpoints" resourcePath="/nacionalnost/{id}" methodName="Nacionalnost getOne" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="nacionalnost getOne" id="cef953bc-a62e-4557-b2cf-76636587f2a3" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/nacionalnost/1</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="7be8f1e3-61e6-45e8-8fd8-43712685c6eb" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters><entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+						<con:parameterOrder>
+							<con:entry>id</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="nacionalnost getByNaziv" id="76749467-6566-4dfb-b843-d42287426eb6">
+				<con:settings/>
+				<con:config service="Nacionalnost endpoints" resourcePath="/nacionalnost/naziv/{naziv}" methodName="nacionalnost getByNaziv" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="nacionalnost getByNaziv" id="29136c06-93ea-4766-8a80-6f20107da1c6" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/nacionalnost/naziv/mleko
+						</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="142b9e1d-1376-4ccc-9005-5d237d49878a" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters><entry key="naziv" value="Srbija" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+						<con:parameterOrder>
+							<con:entry>naziv</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="nacionalnost add" id="d2d5f0e3-cfe5-4624-a9c2-6c94c496cbed">
+				<con:settings/>
+				<con:config service="Nacionalnost endpoints" resourcePath="/nacionalnost/" methodName="nacionalnost add" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="nacionalnost add" id="6dbeea55-174f-46a4-b94c-081226bc0840" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request>{
+"naziv": "Yugoslavia",
+"skracenica": "YUG"
+}
+						</con:request>
+						<con:originalUri>http://localhost/nacionalnost/</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="bc43ce90-b526-493c-9ff8-0b65acfa286e" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>201</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="nacionalnost update" id="c24c1f1d-5ac8-489b-93d7-ade404ce220a">
+				<con:settings/>
+				<con:config service="Nacionalnost endpoints" resourcePath="/nacionalnost/{id}" methodName="nacionalnost update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="nacionalnost update" id="b1fe230b-002a-4fbd-90f0-0227b9887760" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request>{
+	"naziv": "Republika Srbija",
+	"skracenica": "SRB"
+}
+						</con:request>
+						<con:originalUri>http://localhost/nacionalnost/1</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="4023ffee-1280-4e22-9fbe-dfafb46e3c2c" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters><entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+						<con:parameterOrder>
+							<con:entry>id</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="nacionalnost delete" id="0eb86d89-20d1-4dde-82db-1699278f9502">
+				<con:settings/>
+				<con:config service="Nacionalnost endpoints" resourcePath="/nacionalnost/{id}" methodName="nacionalnost delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="nacionalnost delete" id="fcbaced3-b231-4cff-aa09-ced99ad4dcd1" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/nacionalnost/-100
+						</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="d9da4ee4-472d-4a1e-ac0e-d56303645778" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+						<con:parameterOrder>
+							<con:entry>id</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+		</con:testCase>
+		<con:properties/>
+	</con:testSuite>
+	<con:testSuite id="3453b775-4121-490d-95fc-8823075f0246" name="TestSuite - Liga">
+		<con:description>TestSuite generated for REST Service
+			[http://localhost:8080]</con:description>
+		<con:settings/>
+		<con:runType>SEQUENTIAL</con:runType>
+		<con:testCase id="0f8cbd94-db17-4d14-b4fa-0ea7214c2b3c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="http://localhost:8080 TestSuite" searchProperties="true">
+			<con:settings/>
+			<con:testStep type="restrequest" name="liga getAll" id="cdd6bd89-cd97-44a1-9cd8-792c9a9e88d4">
+				<con:settings/>
+				<con:config service="Liga endpoints" resourcePath="/liga" methodName="liga getAll" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="liga getAll" id="c031460f-e6bd-4fdc-bb90-d183668eb1f0" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/liga</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="53051eab-eb96-4094-b248-bcf8670a17f2" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="liga getOne" id="592688f0-576c-4b94-939e-5941753daac1">
+				<con:settings/>
+				<con:config service="Liga endpoints" resourcePath="/liga/{id}" methodName="liga getOne" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="liga getOne" id="9557c4dd-43e1-49d1-bfd6-4a91d12fccde" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/liga/1</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="71789850-9ac1-4aeb-afe7-8c76a7b8b278" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters>
+							<entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/>
+						</con:parameters>
+						<con:parameterOrder>
+							<con:entry>id</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="liga getByNaziv" id="6df82dcd-ee01-4433-9afe-67925f807add">
+				<con:settings/>
+				<con:config service="Liga endpoints" resourcePath="/liga/naziv/{naziv}" methodName="liga getByNaziv" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="liga getByNaziv" id="795d4347-1650-4d78-bd4e-5c66db3dd3c6" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/liga/naziv/imlek
+						</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="e79afc8d-d2fc-4baf-8ae9-b7207f9acaf6" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters>
+							<entry key="naziv" value="imlek" xmlns="http://eviware.com/soapui/config"/>
+						</con:parameters>
+						<con:parameterOrder>
+							<con:entry>naziv</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="liga add" id="58181f4f-1946-4c8f-8fbf-18e88d00c20a">
+				<con:settings/>
+				<con:config service="Liga endpoints" resourcePath="/liga/" methodName="liga add" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="liga add" id="81344677-9c11-4aa0-aabf-93e43c92da02" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request>{
+	"naziv": "Mala Liga",
+	"oznaka": "MA"
+}
+						</con:request>
+						<con:originalUri>http://localhost/liga/</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="0ac4a6e4-ba57-4622-b4b7-85fe07cf190e" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>201</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="liga update" id="743923d9-8a71-4f89-8de1-f89124da801e">
+				<con:settings/>
+				<con:config service="Liga endpoints" resourcePath="/liga/{id}" methodName="liga update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="liga update" id="4a7ddbe0-96be-47df-b7ac-f9faa9b11877" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request>{
+	"naziv": "Malena Liga",
+	"oznaka": "JU"
+}
+						</con:request>
+						<con:originalUri>http://localhost/liga/1</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="bce6b8b4-af08-4a9e-9ee9-3e077ffb4d47" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters><entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+						<con:parameterOrder>
+							<con:entry>id</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="liga delete" id="7d86d3bd-384f-41a5-85d8-75676ac92dab">
+				<con:settings/>
+				<con:config service="Liga endpoints" resourcePath="/liga/{id}" methodName="liga delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="liga delete" id="c9e5727a-bcfe-404c-9b83-11ad7d8187ef" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/liga/-100</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="55918b4e-cbfa-4f96-baea-56a530e7f99e" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters><entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+						<con:parameterOrder>
+							<con:entry>id</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+		</con:testCase>
+		<con:properties/>
+	</con:testSuite>
+	<con:testSuite id="cf44381b-6850-432d-90ac-938d253d2268" name="TestSuite - Tim">
+		<con:description>TestSuite generated for REST Service
+			[http://localhost:8080]</con:description>
+		<con:settings/>
+		<con:runType>SEQUENTIAL</con:runType>
+		<con:testCase id="3999bd4f-dabe-40d9-8242-2f9aeb2cc009" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="http://localhost:8080 TestSuite" searchProperties="true">
+			<con:settings/>
+			<con:testStep type="restrequest" name="tim getAll" id="e55a0387-581e-46c7-9322-37626abe3b73">
+				<con:settings/>
+				<con:config service="Tim endpoints" resourcePath="/tim/" methodName="Tim getAll" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="tim getAll" id="f34137a9-f6ae-48f4-9e6b-ee23db24b336" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/tim/</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="02171b78-67a3-45b3-aab9-d883b83a2e0a" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="tim getOne" id="0d69b78d-80ae-4b09-a8bb-86fe9028652c">
+				<con:settings/>
+				<con:config service="Tim endpoints" resourcePath="/tim/{id}" methodName="tim getOne" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="tim getOne" id="26c06e0c-0e1d-45dc-b75b-17629328d014" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/tim/</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="a0160687-a33a-4e0a-971b-cb2f7d5a7da8" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+						<con:parameterOrder>
+							<con:entry>id</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="tim add" id="aa1677cd-dc63-42e3-9642-669af6014114">
+				<con:settings/>
+				<con:config service="Tim endpoints" resourcePath="/tim/" methodName="tim add" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="tim add" id="2d5cae59-7e23-49c2-8186-cce78dd760d3" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request>{
+	"naziv": "Bundesliga",
+	"osnovan": "1946-09-14T23:00:00.000+00:00",
+	"sediste": "BLG",
+	"liga": {
+		"id": 1
+		}
+}
+						</con:request>
+						<con:originalUri>http://localhost/tim/</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="58c268bb-ccfb-44b3-b29d-2fa2ee0afc20" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>201</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="tim update" id="b065e385-e8af-4de7-b9db-12159533a94c">
+				<con:settings/>
+				<con:config service="Tim endpoints" resourcePath="/tim/{id}" methodName="tim update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="tim update" id="7177eed2-0b0d-45bb-8ec0-e9d859165f13" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request>{
+	"naziv": "Red Star",
+	"osnovan": "2013-02-17T23:00:00.000+00:00",
+	"sediste": "Beograd",
+	"liga": {
+		"id": 3
+	}
+}
+						</con:request>
+						<con:originalUri>http://localhost/tim/1</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="390bb5c8-1418-4748-9730-a47ba147d6fa" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters>
+							<entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/>
+						</con:parameters>
+						<con:parameterOrder>
+							<con:entry>id</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="tim delete" id="95bb407b-5226-493f-8f8b-f2176c627fa3">
+				<con:settings/>
+				<con:config service="Tim endpoints" resourcePath="/tim/{id}" methodName="tim delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="tim delete" id="1336c03a-a612-435c-9dd3-2524d94d16f4" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/tim/-100</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="4d39776b-65ac-4a26-98d4-acbf01d0827e" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters><entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+						<con:parameterOrder>
+							<con:entry>id</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+		</con:testCase>
+		<con:properties/>
+	</con:testSuite>
+	<con:testSuite id="4118a4c3-066f-4c6c-8595-8dbe087bf819" name="TestSuite - Igrac">
+		<con:description>TestSuite generated for REST Service
+			[http://localhost:8080]</con:description>
+		<con:settings/>
+		<con:runType>SEQUENTIAL</con:runType>
+		<con:testCase id="5ec7ee9c-f92a-415b-9415-6fa7d384d5af" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="http://localhost:8080 TestSuite" searchProperties="true">
+			<con:settings/>
+			<con:testStep type="restrequest" name="igrac getAll" id="1e3acfc9-af56-448c-87da-6ab36e3edb15">
+				<con:settings/>
+				<con:config service="Igrac endpoints" resourcePath="/igrac/" methodName="igrac getAll" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="igrac getAll" id="1e1f9011-1c88-4a77-8c86-1ae34f2ff1b9" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/igrac/</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="02c24087-a6dc-40ce-82b4-36499cfb00f2" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="igrac getOne" id="d03c0b06-cf49-46d6-8c81-4c42815fadd2">
+				<con:settings/>
+				<con:config service="Igrac endpoints" resourcePath="/igrac/{id}" methodName="igrac getOne" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="igrac getOne" id="142ff65d-3545-4fb3-b45c-afd90ac8920e" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/igrac/1</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="723d6a1e-167c-46b5-9817-5e2e7fc45f6f" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+						<con:parameterOrder><con:entry>id</con:entry></con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="igrac add" id="0809cbc1-a3f2-429b-a4af-b89e892c33fd">
+				<con:settings/>
+				<con:config service="Igrac endpoints" resourcePath="/igrac/" methodName="igrac add" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="igrac add" id="b1a27380-2927-4986-a54b-0bced853bdb5" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request>{
+	"ime": "Janko",
+	"prezime": "Jankovic",
+	"brojReg": 11232,
+	"datum_rodj": "1990-03-05T23:00:00.000+00:00",
+	"nacionalnost": {
+		"id": 1
+		},
+	"tim": {
+		"id": 1
+		}
+	}
+}
+						</con:request>
+						<con:originalUri>http://localhost/igrac/</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="9ef4c1dc-187b-4301-981b-7fb7eab31e6d" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>201</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+						<con:parameterOrder/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="igrac update" id="a6773bee-8b5e-4b1a-8c81-1627cd09f979">
+				<con:settings/>
+				<con:config service="Igrac endpoints" resourcePath="/igrac/{id}" methodName="igrac update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="igrac update" id="7442ca29-e7ba-4788-bdd4-bfc3f2c73463" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request>{
+   "ime": "Janko",
+   "prezime": "Jankovic",
+   "brojReg": 114,
+   "datumRodjenja": "2011-08-02T22:00:00.000+00:00",
+   "tim":    {
+      "id": 2
+   },
+   "nacionalnost":    {
+      "id": 1
+   }
+}
+						</con:request>
+						<con:originalUri>http://localhost/igrac/1</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="a5978ee1-1e26-47fe-8a37-d491e71f2db7" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters><entry key="id" value="4" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+						<con:parameterOrder>
+							<con:entry>id</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="igrac delete" id="b62dff8d-07fb-4dc5-b365-6a20711594a7">
+				<con:settings/>
+				<con:config service="Igrac endpoints" resourcePath="/igrac/{id}" methodName="igrac delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="igrac delete" id="31959d42-3a8d-4edf-9257-e506f3edd0f7" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/igrac/-100</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="9a102d2a-e967-45b6-b427-37b89b37c6a4" name="Valid HTTP Status Codes">
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters><entry key="id" value="-100" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+						<con:parameterOrder>
+							<con:entry>id</con:entry>
+						</con:parameterOrder>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+		</con:testCase>
+		<con:properties/>
+	</con:testSuite>
+	<con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="COMPLEMENT" domain="Nacionalnost">http://localhost:8080</con:endpoint></con:endpointStrategy><con:properties/>
+	<con:wssContainer/>
+	<con:oAuth2ProfileContainer/>
+	<con:oAuth1ProfileContainer/>
+</con:soapui-project>

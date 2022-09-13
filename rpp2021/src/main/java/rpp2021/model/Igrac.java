@@ -10,6 +10,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
@@ -42,10 +43,12 @@ public class Igrac implements Serializable {
 	private Date datumRodjenja;
 	
 
-	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "tim")
 	private Tim tim;
 	
-	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "nacionalnost")
 	private Nacionalnost nacionalnost;
 	
 	public Integer getId() {

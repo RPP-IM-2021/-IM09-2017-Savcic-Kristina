@@ -68,8 +68,8 @@ public class IgracRestController {
 
 		if (id == -100 && !igracRepository.existsById(id)) {
 			jdbcTemplate.execute("INSERT INTO igrac "
-					+ "(\"id\", \"broj_reg\", \"kolicina\", \"prezime\", \"ime\", \"tim\", \"nacionalnost\") "
-					+ "VALUES ('-100', '100', '1', 'komad', '100', '1', '1')");
+					+ "(\"id\", \"tim\", \"broj_reg\", \"nacionalnost\", \"prezime\", \"ime\", \"datum_rodjenja\") "
+					+ "VALUES (-100, 3, 4, 3, 'Majkl', 'Majklovski', to_date('11.03.1993.', 'dd.mm.yyyy.'))");
 		}
 
 		if(igracRepository.existsById(id)) {

@@ -14,7 +14,7 @@ public interface IgracRepository extends JpaRepository<Igrac, Integer>{
 	Collection<Igrac> findByTim(Tim tim);
 	Collection<Igrac> findByImeLessThanOrderById(BigDecimal ime);
 
-	@Query(value = "select coalesce(max(broj_reg)+1, 1) from igrac where tim = ?1", nativeQuery = true)
+	@Query(value = "select coalesce(max(broj_reg)+1, 1) from igrac where igrac.tim = ?1", nativeQuery = true)
 	Integer nextRBR(Integer timId);
 
 }
